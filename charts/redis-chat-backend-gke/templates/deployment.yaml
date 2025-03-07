@@ -1,0 +1,36 @@
+{{- if .Values.redis.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ .Release.Name }}-deploy
+  name: {{ .Release.Name }}-deploy
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-deploy
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-deploy
+    spec:
+      containers:
+      - image: redis:{{ .Values.redis.version }}
+        imagePullPolicy: IfNotPresent
+        name: redis-1
+        args:
+          - --save
+          - "60"
+          - "1"
+          - --loglevel
+          - warning
+        resources:
+          limits:
+            cpu: {{ .Values.redis.resources.limits.cpu }}
+            memory: {{ .Values.redis.resources.limits.memory }}
+          requests:
+            cpu: {{ .Values.redis.resources.requests.cpu }}
+            memory: {{ .Values.redis.resources.requests.memory }}
+{{- end }}

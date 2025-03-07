@@ -1,0 +1,11 @@
+apiVersion: v1
+entries:
+  redis-chat-backend:
+  - apiVersion: v1
+    created: "2025-03-07T23:03:11.319567172Z"
+    digest: 353108d4f2031f0db1637a1730d818f8efd653ecec92fa51e5932b6ccf8110c0
+    name: redis-chat-backend
+    urls:
+    - https://github.com/brunoeas/helm-charts/releases/download/redis-chat-backend-v0.0.1/redis-chat-backend-v0.0.1.tgz
+    version: v0.0.1
+generated: "2025-03-07T23:03:11.319577642Z"

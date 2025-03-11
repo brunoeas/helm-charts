@@ -7,11 +7,11 @@ redis:
     requests:
       cpu: 500m
       memory: 100Mi
-      ephemeral-storage: 100Mi
+      ephemeralStorage: 100Mi
     limits:
       cpu: 1000m
       memory: 500Mi
-      ephemeral-storage: 500Mi
+      ephemeralStorage: 500Mi
 
 service:
   enabled: true

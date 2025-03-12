@@ -12,7 +12,7 @@ spec:
   ports:
   - port: {{ .Values.service.port }}
     protocol: TCP
-    targetPort: {{ .Values.chatBackend.containerPort }}
+    targetPort: {{ .Values.deployment.containerPort }}
 {{- if .Values.service.portName }}
     name: {{ .Values.service.portName }}
 {{- end }}

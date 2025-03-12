@@ -1,5 +1,13 @@
 apiVersion: v1
 entries:
+  chat-backend:
+  - apiVersion: v1
+    created: "2025-03-12T21:51:11.732904056Z"
+    digest: 9aac37656426970e5449d4b025a52807135564286733aaf1a6eedc7537e13b13
+    name: chat-backend
+    urls:
+    - https://github.com/brunoeas/helm-charts/releases/download/chat-backend-v0.0.1/chat-backend-v0.0.1.tgz
+    version: v0.0.1
   redis-chat-backend:
   - apiVersion: v1
     created: "2025-03-11T23:03:17.881510076Z"
@@ -22,4 +30,4 @@ entries:
     urls:
     - https://github.com/brunoeas/helm-charts/releases/download/redis-chat-backend-v0.0.1/redis-chat-backend-v0.0.1.tgz
     version: v0.0.1
-generated: "2025-03-11T23:03:17.881519604Z"
+generated: "2025-03-12T21:51:11.732920135Z"

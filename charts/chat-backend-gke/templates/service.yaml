@@ -1,0 +1,25 @@
+{{- if .Values.service.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    cloud.google.com/neg: '{"ingress":true}'
+  labels:
+    app: "{{ .Release.Name }}-deploy"
+  name: "{{ .Release.Name }}-deploy-service"
+  namespace: {{ .Values.namespace }}
+spec:
+  ports:
+  - port: {{ .Values.service.port }}
+    protocol: TCP
+    targetPort: {{ .Values.chatBackend.containerPort }}
+{{- if .Values.service.portName }}
+    name: {{ .Values.service.portName }}
+{{- end }}
+  selector:
+    app: "{{ .Release.Name }}-deploy"
+  type: {{ .Values.service.type }}
+{{- if eq .Values.service.type "LoadBalancer" }}
+  loadBalancerIP: ""
+{{- end }}
+{{- end }}

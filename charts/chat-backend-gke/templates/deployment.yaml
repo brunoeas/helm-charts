@@ -17,7 +17,7 @@ spec:
         app: "{{ .Release.Name }}-deploy"
     spec:
       containers:
-      - image: brunoeas1/chat-backend:{{ .Values.deployment.version | quote }}
+      - image: "brunoeas1/chat-backend:{{ .Values.deployment.version }}"
         imagePullPolicy: {{ .Values.deployment.imagePullPolicy | quote }}
         name: chat-backend-1
         ports:

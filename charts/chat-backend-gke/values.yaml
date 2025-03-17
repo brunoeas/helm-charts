@@ -57,7 +57,7 @@ deployment:
     timeoutSeconds: 5
     initialDelaySeconds: 7
     httpGet:
-      path: /q/health/live
+      path: /q/health/started
       port: 8080
       scheme: HTTP
 

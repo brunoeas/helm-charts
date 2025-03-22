@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  brunoeas-aplic-gke:
+  - apiVersion: v2
+    created: "2025-03-22T15:07:12.555556874Z"
+    description: A Helm chart for Kubernetes
+    digest: d63ebec4807020004ece0eabdddf775df429963411d815ed8d343a207ea27176
+    name: brunoeas-aplic-gke
+    type: library
+    urls:
+    - https://github.com/brunoeas/helm-charts/releases/download/brunoeas-aplic-gke-0.0.1/brunoeas-aplic-gke-0.0.1.tgz
+    version: 0.0.1
   chat-backend:
   - apiVersion: v1
     created: "2025-03-12T21:51:11.732904056Z"
@@ -9,6 +19,19 @@ entries:
     - https://github.com/brunoeas/helm-charts/releases/download/chat-backend-v0.0.1/chat-backend-v0.0.1.tgz
     version: v0.0.1
   chat-backend-gke:
+  - apiVersion: v2
+    created: "2025-03-22T15:07:12.679227817Z"
+    dependencies:
+    - alias: chat-backend
+      name: brunoeas-aplic-gke
+      repository: file://../brunoeas-aplic-gke
+      version: ~0.0.1
+    digest: a8b40a428af719f3d94528dbe7ac616b6f323959022e5c759eca30506cc621d4
+    name: chat-backend-gke
+    type: application
+    urls:
+    - https://github.com/brunoeas/helm-charts/releases/download/chat-backend-gke-v0.0.7/chat-backend-gke-v0.0.7.tgz
+    version: v0.0.7
   - apiVersion: v1
     created: "2025-03-17T21:06:44.284603902Z"
     digest: 8ce3e047179200725c9b872c2b3f46bdc3a8511f588e776ba4525fd217eecbce
@@ -45,6 +68,14 @@ entries:
     - https://github.com/brunoeas/helm-charts/releases/download/chat-backend-gke-v0.0.2/chat-backend-gke-v0.0.2.tgz
     version: v0.0.2
   redis-chat-backend:
+  - apiVersion: v2
+    created: "2025-03-22T15:07:12.819628987Z"
+    digest: c6e6c5bc9a0c3d85a300e494b8ef6ea328cd47bf822e745735aade2175da5a99
+    name: redis-chat-backend
+    type: application
+    urls:
+    - https://github.com/brunoeas/helm-charts/releases/download/redis-chat-backend-v0.0.4/redis-chat-backend-v0.0.4.tgz
+    version: v0.0.4
   - apiVersion: v1
     created: "2025-03-11T23:03:17.881510076Z"
     digest: 050150044da3304d82abed3e333f4a85b5e8ef5f4b57e5dd07929ed8d102206b
@@ -66,4 +97,4 @@ entries:
     urls:
     - https://github.com/brunoeas/helm-charts/releases/download/redis-chat-backend-v0.0.1/redis-chat-backend-v0.0.1.tgz
     version: v0.0.1
-generated: "2025-03-17T21:06:44.284631854Z"
+generated: "2025-03-22T15:07:12.819663432Z"

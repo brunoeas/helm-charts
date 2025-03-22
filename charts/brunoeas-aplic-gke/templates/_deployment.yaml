@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "brunoeas-aplic.fullname" . }}
+  name: {{ include "brunoeas-aplic-gke.fullname" . }}
   labels:
-    {{- include "brunoeas-aplic.labels" . | nindent 4 }}
+    {{- include "brunoeas-aplic-gke.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "brunoeas-aplic.selectorLabels" . | nindent 6 }}
+      {{- include "brunoeas-aplic-gke.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,7 +18,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "brunoeas-aplic.labels" . | nindent 8 }}
+        {{- include "brunoeas-aplic-gke.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
@@ -28,7 +28,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{- if .Values.serviceAccount.create }}
-      serviceAccountName: {{ include "brunoeas-aplic.serviceAccountName" . }}
+      serviceAccountName: {{ include "brunoeas-aplic-gke.serviceAccountName" . }}
       {{- end }}
       {{- with .Values.podSecurityContext }}
       securityContext:

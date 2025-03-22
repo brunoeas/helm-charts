@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "brunoeas-aplic.fullname" . }}
+  name: {{ include "brunoeas-aplic-gke.fullname" . }}
   annotations:
     cloud.google.com/neg: '{"ingress":true}'
   labels:
-    {{- include "brunoeas-aplic.labels" . | nindent 4 }}
+    {{- include "brunoeas-aplic-gke.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   {{- if eq .Values.service.type "LoadBalancer" }}
@@ -17,4 +17,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "brunoeas-aplic.selectorLabels" . | nindent 4 }}
+    {{- include "brunoeas-aplic-gke.selectorLabels" . | nindent 4 }}

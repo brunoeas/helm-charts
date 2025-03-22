@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "brunoeas-aplic.fullname" . }}
+  name: {{ include "brunoeas-aplic-gke.fullname" . }}
   labels:
-    {{- include "brunoeas-aplic.labels" . | nindent 4 }}
+    {{- include "brunoeas-aplic-gke.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "brunoeas-aplic.fullname" . }}
+    name: {{ include "brunoeas-aplic-gke.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

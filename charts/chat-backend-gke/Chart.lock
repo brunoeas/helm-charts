@@ -1,0 +1,6 @@
+dependencies:
+- name: brunoeas-aplic-gke
+  repository: https://brunoeas.github.io/helm-charts
+  version: 0.0.5
+digest: sha256:d3233123658a0e76123031e66f7c846e4ac2f5d3fe68aed5c3517b33d13d3a60
+generated: "2025-03-22T15:00:43.438541981-03:00"

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: chat-backend-gke
-version: 0.1.4
+version: 0.1.5
 
 # A chart can be either an 'application' or a 'library' chart.
 #

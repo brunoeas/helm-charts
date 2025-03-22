@@ -1,3 +1,5 @@
+nameSecretCert: "chat-backend-secret-cert"
+
 chat-backend:
   service:
     port: 8080
@@ -7,7 +9,7 @@ chat-backend:
     enabled: true
     globalPublicStaticIPName: "ip-estatico-publico-global"
     tls:
-      - secretName: {{ include "chat-backend-gke.name-secret-cert" . }}
+      - secretName: "chat-backend-secret-cert"
         hosts:
           - bruno-eduardo-a-soares.com.br
 

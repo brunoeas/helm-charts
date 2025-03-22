@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "brunoeas-aplic.fullname" . }}
+  annotations:
+    cloud.google.com/neg: '{"ingress":true}'
+  labels:
+    {{- include "brunoeas-aplic.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  {{- if eq .Values.service.type "LoadBalancer" }}
+  loadBalancerIP: ""
+  {{- end }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "brunoeas-aplic.selectorLabels" . | nindent 4 }}

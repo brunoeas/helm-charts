@@ -1,35 +1,33 @@
-namespace: chat-backend
+chat-backend:
+  service:
+    port: 8080
+    type: "NodePort"
 
-service:
-  enabled: true
-  port: 443
-  type: "NodePort"
+  ingress:
+    enabled: true
+    globalPublicStaticIPName: "ip-estatico-publico-global"
 
-ingress:
-  enabled: true
-  nomeIPEstaticoPublicoGlobal: "ip-estatico-publico-global"
+  image: 
+    repository: "brunoeas1/chat-backend"
+    tag: "0.0.1-SNAPSHOT.4"
+    pullPolicy: "IfNotPresent"
 
-deployment:
-  enabled: true
-  version: "0.0.1-SNAPSHOT.4"
-  imagePullPolicy: "IfNotPresent"
-  containerPort: 8080
-  replicas: 3
+  replicaCount: 1
   environments:
-  - name: QUARKUS_REDIS_HOSTS
-    value: "redis://redis-chat-backend-deploy-service.redis-chat-backend.svc.cluster.local:6379"
-  - name: QUARKUS_HTTP_CORS
-    value: "true"
-  - name: QUARKUS_HTTP_CORS_ORIGINS
-    value: "*"
-  - name: QUARKUS_HTTP_CORS_HEADERS
-    value: "*"
-  - name: QUARKUS_HTTP_CORS_ACCESS_CONTROL_MAX_AGE
-    value: "1800"
-  - name: QUARKUS_HTTP_CORS_ACCESS_CONTROL_ALLOW_CREDENTIALS
-    value: "true"
-  - name: QUARKUS_HTTP_CORS_METHODS
-    value: "GET,POST,PUT,DELETE"
+    - name: QUARKUS_REDIS_HOSTS
+      value: "redis://redis-chat-backend-deploy-service.redis-chat-backend.svc.cluster.local:6379"
+    - name: QUARKUS_HTTP_CORS
+      value: "true"
+    - name: QUARKUS_HTTP_CORS_ORIGINS
+      value: "*"
+    - name: QUARKUS_HTTP_CORS_HEADERS
+      value: "*"
+    - name: QUARKUS_HTTP_CORS_ACCESS_CONTROL_MAX_AGE
+      value: "1800"
+    - name: QUARKUS_HTTP_CORS_ACCESS_CONTROL_ALLOW_CREDENTIALS
+      value: "true"
+    - name: QUARKUS_HTTP_CORS_METHODS
+      value: "GET,POST,PUT,DELETE"
   resources:
     requests:
       cpu: 500m
@@ -44,20 +42,19 @@ deployment:
     initialDelaySeconds: 10
     httpGet:
       path: /q/health/ready
-      port: 8080
+      port: http
       scheme: HTTP
   livenessProbe:
     timeoutSeconds: 5
     initialDelaySeconds: 10
     httpGet:
       path: /q/health/live
-      port: 8080
+      port: http
       scheme: HTTP
   startupProbe:
     timeoutSeconds: 5
     initialDelaySeconds: 7
     httpGet:
       path: /q/health/started
-      port: 8080
+      port: http
       scheme: HTTP
-

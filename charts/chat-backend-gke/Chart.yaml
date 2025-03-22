@@ -1,6 +1,24 @@
-apiVersion: v1
+apiVersion: v2
 name: chat-backend-gke
-version: v0.0.6
+version: v0.0.7
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+dependencies:
+  - name: brunoeas-aplic-gke
+    alias: chat-backend
+    version: ~0.0.1
+    repository: file://../brunoeas-aplic-gke
+    # repository: https://brunoeas.github.io/helm-charts
+
 #kubeVersion: A SemVer range of compatible Kubernetes versions (optional)
 #description: A single-sentence description of this project (optional)
 #keywords:

@@ -21,7 +21,7 @@ chat-backend:
   replicaCount: 1
   environments:
     - name: QUARKUS_REDIS_HOSTS
-      value: "redis://redis-chat-backend-deploy-service.redis-chat-backend.svc.cluster.local:6379"
+      value: "redis://redis-chat-backend-deploy-service.default.svc.cluster.local:6379"
     - name: QUARKUS_HTTP_CORS
       value: "true"
     - name: QUARKUS_HTTP_CORS_ORIGINS

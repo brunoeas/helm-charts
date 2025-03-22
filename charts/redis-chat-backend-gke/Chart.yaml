@@ -1,6 +1,6 @@
 apiVersion: v2
 name: redis-chat-backend
-version: v0.0.4
+version: v0.0.5
 
 # A chart can be either an 'application' or a 'library' chart.
 #

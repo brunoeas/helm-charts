@@ -1,4 +1,4 @@
-namespace: redis-chat-backend
+namespace: default
 
 redis:
   enabled: true

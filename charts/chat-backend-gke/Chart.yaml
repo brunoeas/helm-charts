@@ -15,7 +15,7 @@ type: application
 dependencies:
   - name: brunoeas-aplic-gke
     alias: chat-backend
-    version: ~0.0.2
+    version: ~0.0.3
     repository: file://../brunoeas-aplic-gke
     # repository: https://brunoeas.github.io/helm-charts
 

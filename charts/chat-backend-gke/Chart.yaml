@@ -1,6 +1,6 @@
 apiVersion: v2
 name: chat-backend-gke
-version: 0.1.0
+version: 0.1.1
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -16,8 +16,7 @@ dependencies:
   - name: brunoeas-aplic-gke
     alias: chat-backend
     version: ~0.0.4
-    repository: file://../brunoeas-aplic-gke
-    # repository: https://brunoeas.github.io/helm-charts
+    repository: https://brunoeas.github.io/helm-charts
 
 #kubeVersion: A SemVer range of compatible Kubernetes versions (optional)
 #description: A single-sentence description of this project (optional)

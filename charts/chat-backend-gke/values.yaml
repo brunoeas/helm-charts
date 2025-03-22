@@ -1,6 +1,7 @@
 nameSecretCert: "chat-backend-secret-cert"
 
-chat-backend:
+# chat-backend:
+brunoeas-aplic-gke:
   service:
     port: 8080
     type: "NodePort"

@@ -6,6 +6,10 @@ chat-backend:
   ingress:
     enabled: true
     globalPublicStaticIPName: "ip-estatico-publico-global"
+    tls:
+      - secretName: {{ include "chat-backend-gke.name-secret-cert" . }}
+        hosts:
+          - bruno-eduardo-a-soares.com.br
 
   image: 
     repository: "brunoeas1/chat-backend"

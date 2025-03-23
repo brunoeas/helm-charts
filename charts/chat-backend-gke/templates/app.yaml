@@ -1,9 +1,9 @@
-{{- include "chat-backend.ingress" . }}
+{{- include "brunoeas-aplic-gke.ingress" . }}
 ---
-{{- include "chat-backend.service" . }}
+{{- include "brunoeas-aplic-gke.service" . }}
 ---
-{{- include "chat-backend.deployment" . }}
+{{- include "brunoeas-aplic-gke.deployment" . }}
 ---
-{{- include "chat-backend.hpa" . }}
+{{- include "brunoeas-aplic-gke.hpa" . }}
 ---
-{{- include "chat-backend.serviceaccount" . }}
+{{- include "brunoeas-aplic-gke.serviceaccount" . }}

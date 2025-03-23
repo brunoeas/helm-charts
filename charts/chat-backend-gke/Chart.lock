@@ -3,4 +3,4 @@ dependencies:
   repository: file://../brunoeas-aplic-gke
   version: 0.0.5
 digest: sha256:65b6a3cfa211fb0cb40228ea9cce2e0e36d13faba970c2cd0b73a231aa54f3c0
-generated: "2025-03-23T12:33:28.8120158-03:00"
+generated: "2025-03-23T12:41:01.237722849-03:00"

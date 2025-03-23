@@ -1,9 +1,0 @@
-{{- include "brunoeas-aplic-gke.ingress" . }}
----
-{{- include "brunoeas-aplic-gke.service" . }}
----
-{{- include "brunoeas-aplic-gke.deployment" . }}
----
-{{- include "brunoeas-aplic-gke.hpa" . }}
----
-{{- include "brunoeas-aplic-gke.serviceAccount" . }}

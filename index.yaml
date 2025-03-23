@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   brunoeas-aplic-gke:
   - apiVersion: v2
+    created: "2025-03-23T16:50:36.668760395Z"
+    description: A Helm chart library for Kubernetes
+    digest: bf3c1a0f8e1596b031baa9a50ffd30f7128a8d0c6a4d6a832bd70802af60278c
+    name: brunoeas-aplic-gke
+    type: application
+    urls:
+    - https://github.com/brunoeas/helm-charts/releases/download/brunoeas-aplic-gke-0.1.2/brunoeas-aplic-gke-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2025-03-23T16:07:00.555646974Z"
     description: A Helm chart library for Kubernetes
     digest: 86d936ca53dd7337fbd9540b3334da9fe513b501a521d26fdd3535b69be32ff6
@@ -55,6 +64,19 @@ entries:
     - https://github.com/brunoeas/helm-charts/releases/download/chat-backend-v0.0.1/chat-backend-v0.0.1.tgz
     version: v0.0.1
   chat-backend-gke:
+  - apiVersion: v2
+    created: "2025-03-23T16:50:36.846750866Z"
+    dependencies:
+    - alias: chat-backend
+      name: brunoeas-aplic-gke
+      repository: file://../brunoeas-aplic-gke
+      version: 0.1.2
+    digest: 80cf337773872089e5bbcd594a21454d20cc50abb5ee08c254ac9ac06fc6c4d0
+    name: chat-backend-gke
+    type: application
+    urls:
+    - https://github.com/brunoeas/helm-charts/releases/download/chat-backend-gke-0.1.14/chat-backend-gke-0.1.14.tgz
+    version: 0.1.14
   - apiVersion: v2
     created: "2025-03-23T16:08:45.952905262Z"
     dependencies:
@@ -307,4 +329,4 @@ entries:
     urls:
     - https://github.com/brunoeas/helm-charts/releases/download/redis-chat-backend-v0.0.1/redis-chat-backend-v0.0.1.tgz
     version: v0.0.1
-generated: "2025-03-23T16:08:45.953065231Z"
+generated: "2025-03-23T16:50:36.846879206Z"

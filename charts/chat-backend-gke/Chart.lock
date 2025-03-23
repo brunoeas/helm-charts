@@ -1,6 +1,6 @@
 dependencies:
 - name: brunoeas-aplic-gke
   repository: file://../brunoeas-aplic-gke
-  version: 0.1.2
-digest: sha256:79bd0802ca8461452620c6f050fb2244bda6225e3e36c2fcb2de35d43b898acb
-generated: "2025-03-23T13:44:37.732143883-03:00"
+  version: 0.1.3
+digest: sha256:18eca59b3a7cafa59da54338edb0200d928684121e0aae39fc9962e5962cf15c
+generated: "2025-03-23T13:55:45.06049764-03:00"

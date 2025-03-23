@@ -6,4 +6,4 @@
 ---
 {{- include "brunoeas-aplic-gke.hpa" . }}
 ---
-{{- include "brunoeas-aplic-gke.serviceaccount" . }}
+{{- include "brunoeas-aplic-gke.serviceAccount" . }}

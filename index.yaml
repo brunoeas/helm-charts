@@ -38,6 +38,19 @@ entries:
     version: v0.0.1
   chat-backend-gke:
   - apiVersion: v2
+    created: "2025-03-23T15:34:31.067158645Z"
+    dependencies:
+    - alias: chat-backend
+      name: brunoeas-aplic-gke
+      repository: file://../brunoeas-aplic-gke
+      version: 0.0.5
+    digest: 512f4b88b9a1176addf121b69553dd16b53491a8a8ce80bb100f3310e32506d2
+    name: chat-backend-gke
+    type: application
+    urls:
+    - https://github.com/brunoeas/helm-charts/releases/download/chat-backend-gke-0.1.9/chat-backend-gke-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
     created: "2025-03-22T20:00:52.414084304Z"
     dependencies:
     - name: brunoeas-aplic-gke
@@ -226,4 +239,4 @@ entries:
     urls:
     - https://github.com/brunoeas/helm-charts/releases/download/redis-chat-backend-v0.0.1/redis-chat-backend-v0.0.1.tgz
     version: v0.0.1
-generated: "2025-03-22T20:00:52.41419409Z"
+generated: "2025-03-23T15:34:31.06730192Z"

@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   brunoeas-aplic-gke:
   - apiVersion: v2
+    created: "2025-03-23T16:07:00.555646974Z"
+    description: A Helm chart library for Kubernetes
+    digest: 86d936ca53dd7337fbd9540b3334da9fe513b501a521d26fdd3535b69be32ff6
+    name: brunoeas-aplic-gke
+    type: library
+    urls:
+    - https://github.com/brunoeas/helm-charts/releases/download/brunoeas-aplic-gke-0.1.0/brunoeas-aplic-gke-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
     created: "2025-03-23T15:46:03.687269862Z"
     description: A Helm chart for Kubernetes
     digest: 08f64e35ad95d3c7c5c01f0621ce138238d6816f0583f853f449ea2e406dc1cd
@@ -286,4 +295,4 @@ entries:
     urls:
     - https://github.com/brunoeas/helm-charts/releases/download/redis-chat-backend-v0.0.1/redis-chat-backend-v0.0.1.tgz
     version: v0.0.1
-generated: "2025-03-23T15:50:20.364208054Z"
+generated: "2025-03-23T16:07:00.555711945Z"

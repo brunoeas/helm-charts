@@ -1,0 +1,9 @@
+{{- include "chat-backend.ingress" . }}
+---
+{{- include "chat-backend.service" . }}
+---
+{{- include "chat-backend.deployment" . }}
+---
+{{- include "chat-backend.hpa" . }}
+---
+{{- include "chat-backend.serviceaccount" . }}
